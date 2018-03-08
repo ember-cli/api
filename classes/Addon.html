@@ -1788,6 +1788,7 @@ would typically use this hook to perform additional imports</p>
 
         <h4>Example:</h4>
         <pre class="code prettyprint"><code class="language-js">included(parent) {
+  this._super.included.apply(this, arguments);
   this.import(somePath);
 }
 </code></pre>
