@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ember-cli</title>
+    <link rel="stylesheet" href="./assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="./assets/css/main.css" id="site_styles">
+    <script src="http://yui.yahooapis.com/combo?3.8.0pr2/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div class="yui3-g">
+        <div id="sidebar" class="yui3-u">
+            <div class="logo">
+              <a href="./index.html">
+                  <img src="https://ember-cli.com/assets/images/ember-cli-logo-small-dark.png">
+              </a>
+            </div>
+            
+            <div id="modules" class="sidebox">
+                <div class="hd">
+                    <h2 class="no-toc">Modules</h2>
+                </div>
+                <div class="bd">
+                    <ul>
+                            <li><a href="./modules/ember-cli.html">ember-cli</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="classes" class="sidebox">
+                <div class="hd">
+                    <h2 class="no-toc">Classes</h2>
+                </div>
+                <div class="bd">
+                    <ul>
+                            <li><a href="./classes/Addon.html">Addon</a></li>
+                            <li><a href="./classes/AddonDiscovery.html">AddonDiscovery</a></li>
+                            <li><a href="./classes/AddonsFactory.html">AddonsFactory</a></li>
+                            <li><a href="./classes/AmdTransformAddon.html">AmdTransformAddon</a></li>
+                            <li><a href="./classes/Assembler.html">Assembler</a></li>
+                            <li><a href="./classes/Blueprint.html">Blueprint</a></li>
+                            <li><a href="./classes/Builder.html">Builder</a></li>
+                            <li><a href="./classes/CLI.html">CLI</a></li>
+                            <li><a href="./classes/Command.html">Command</a></li>
+                            <li><a href="./classes/ConcatenationStrategy.html">ConcatenationStrategy</a></li>
+                            <li><a href="./classes/EmberAddon.html">EmberAddon</a></li>
+                            <li><a href="./classes/EmberApp.html">EmberApp</a></li>
+                            <li><a href="./classes/HistorySupportAddon.html">HistorySupportAddon</a></li>
+                            <li><a href="./classes/Instrumentation.html">Instrumentation</a></li>
+                            <li><a href="./classes/NpmTask.html">NpmTask</a></li>
+                            <li><a href="./classes/Project.html">Project</a></li>
+                            <li><a href="./classes/ServeFilesAddon.html">ServeFilesAddon</a></li>
+                            <li><a href="./classes/TestsServerAddon.html">TestsServerAddon</a></li>
+                            <li><a href="./classes/WatcherAddon.html">WatcherAddon</a></li>
+                            <li><a href="./classes/WindowsSymlinkChecker.html">WindowsSymlinkChecker</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+            
+            
+            
+            <div class="version-info">
+              Version: 3.0.0--848ef37ffc
+            </div>
+            
+        </div>
+
+        <div id="main" class="yui3-u">
+            <div class="content"><h1>ember-cli</h1>
+<p><a href="https://www.npmjs.com/package/ember-cli"><img src="https://img.shields.io/npm/v/ember-cli.svg" alt="Latest npm release"></a>
+<a href="https://travis-ci.org/ember-cli/ember-cli"><img src="https://img.shields.io/travis/ember-cli/ember-cli/master.svg?label=TravisCI" alt="TravisCI Build Status"></a>
+<a href="https://ci.appveyor.com/project/embercli/ember-cli/branch/master"><img src="https://img.shields.io/appveyor/ci/embercli/ember-cli/master.svg?label=AppVeyor" alt="AppVeyor Build Status"></a>
+<a href="https://coveralls.io/github/ember-cli/ember-cli"><img src="https://img.shields.io/coveralls/ember-cli/ember-cli/master.svg" alt="Test Coverage"></a>
+<a href="https://codeclimate.com/github/ember-cli/ember-cli"><img src="https://img.shields.io/codeclimate/github/ember-cli/ember-cli.svg" alt="Code Climate"></a></p>
+<p>The Ember.js command line utility.</p>
+<h2>Features</h2>
+<ul>
+<li>Asset build pipeline using <a href="http://broccolijs.com/">Broccoli.js</a></li>
+<li>ES6 transpilation using <a href="https://babeljs.io/">Babel</a></li>
+<li>Project structure conventions using ES6 module syntax</li>
+<li>Development server including live-reload and API proxy</li>
+<li>File/Project generator using blueprints</li>
+<li>Unit, Integration and Acceptance test support using
+<a href="https://github.com/testem/testem">Testem</a></li>
+<li>Powerful addon system for extensibility</li>
+</ul>
+<h2>Installation</h2>
+<pre><code>npm install -g ember-cli
+</code></pre>
+<h2>Usage</h2>
+<p>After installation the <code>ember</code> CLI tool will be available to you. It is the
+entrypoint for all the functionality mentioned above.</p>
+<p>You can call <code>ember &lt;command&gt; --help</code> to find out more about all of the
+following commands or visit <a href="https://ember-cli.com/user-guide/">https://ember-cli.com/user-guide/</a> to read
+the in-depth documentation.</p>
+<h3>Create a new project</h3>
+<pre><code>ember new my-new-app
+</code></pre>
+<p>This will create a new folder <code>my-new-app</code>, initialize a Git project in it,
+add the basic Ember.js project structure and install any necessary npm and
+Bower dependencies.</p>
+<h3>Create a new addon project</h3>
+<pre><code>ember addon my-new-addon
+</code></pre>
+<p>This is essentially similar to <code>ember new</code> but will generate the structure
+for an ember-cli addon instead.</p>
+<h3>Build the project</h3>
+<pre><code>ember build
+</code></pre>
+<p>This will create a <code>dist</code> folder and run the build pipeline to generate all
+the output files in it. You can specify <code>--environment=production</code> to build
+in production mode, which includes code minification and other optimizations.</p>
+<h3>Run the development server</h3>
+<pre><code>ember serve
+</code></pre>
+<p>This will launch a development server that will automatically rebuild your
+project on file changes and serves the built app at <a href="http://localhost:4200/">http://localhost:4200/</a>.</p>
+<h3>Run the test suite</h3>
+<pre><code>ember test
+</code></pre>
+<p>This command will start the Testem runner, which will run all your tests from
+the <code>tests</code> folder. This command also supports a <code>--server</code> option which will
+automatically run tests on file changes.</p>
+<h3>Generate files</h3>
+<pre><code>ember generate route foo
+</code></pre>
+<p>This will generate a <code>route</code> named <code>foo</code>. <code>route</code> is an example here and can
+be replaced by any other available blueprint. Blueprints are provided by
+ember-cli itself and any of you installed addons. Run <code>ember generate --help</code>
+to see a list of available blueprints in your project and their options.</p>
+<h3>Install an ember-cli addon</h3>
+<pre><code>ember install some-other-addon
+</code></pre>
+<p>This will search npm for a package named <code>some-other-addon</code>, install it and
+run any additional install steps defined in the addon.</p>
+<h2>Community</h2>
+<ul>
+<li>Slack: <a href="https://ember-community-slackin.herokuapp.com/">Get your invite</a></li>
+<li>IRC: #ember-cli on <a href="https://webchat.freenode.net/?channels=%23ember-cli">freenode</a></li>
+<li>Issues: <a href="https://github.com/ember-cli/ember-cli/issues">ember-cli/issues</a></li>
+<li>Website: <a href="https://ember-cli.com">ember-cli.com</a></li>
+</ul>
+<h2>Development</h2>
+<p>Start by cloning the Git project to your local hard drive:</p>
+<pre><code>git clone https://github.com/ember-cli/ember-cli.git
+</code></pre>
+<h3>Link <code>ember</code> to your development version</h3>
+<p>Running the following command will link the global <code>ember</code> utility to your
+local development version:</p>
+<pre><code>npm link
+</code></pre>
+<p>Note that the global <code>ember</code> CLI utility will automatically relay to any
+project-local ember-cli installation. If you want to use your development
+version there instead run the following command from your Ember.js
+project folder:</p>
+<pre><code>npm link ember-cli
+</code></pre>
+<p>Read the official <a href="https://www.npmjs.org/doc/cli/npm-link.html">npm-link documentation</a>
+for more information.</p>
+<h3>Run the test suite</h3>
+<pre><code>npm test
+</code></pre>
+<p>will run ESLint and the &quot;fast&quot; subset of the test suite. Run
+<code>npm run test-all</code> for the full test suite which will currently take quite a
+few minutes due to heavy IO and network usage.</p>
+<p>ember-cli is using <a href="https://mochajs.org/">Mocha</a> for its internal tests. If
+you want to run a specific subset of tests have a look at their
+<a href="https://mochajs.org/#exclusive-tests">documentation</a>.</p>
+<h2>Build the documentation</h2>
+<p>Use <code>npm run docs</code> to build HTML and JSON documentation with YUIDoc and place
+it in <code>docs/build/</code>. Please help by improving this documentation.</p>
+<h2>License</h2>
+<p>This project is licensed under the <a href="LICENSE">MIT License</a>.</p>
+
+</div>
+        </div>
+    </div>
+</div>
+<script src="./assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="./assets/js/yui-prettify.js"></script>
+</body>
+</html>

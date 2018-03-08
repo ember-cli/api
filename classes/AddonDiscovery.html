@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>AddonDiscovery - ember-cli</title>
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <script src="http://yui.yahooapis.com/combo?3.8.0pr2/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div class="yui3-g">
+        <div id="sidebar" class="yui3-u">
+            <div class="logo">
+              <a href="../index.html">
+                  <img src="https://ember-cli.com/assets/images/ember-cli-logo-small-dark.png">
+              </a>
+            </div>
+            
+            <div id="modules" class="sidebox">
+                <div class="hd">
+                    <h2 class="no-toc">Modules</h2>
+                </div>
+                <div class="bd">
+                    <ul>
+                            <li><a href="../modules/ember-cli.html">ember-cli</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="classes" class="sidebox">
+                <div class="hd">
+                    <h2 class="no-toc">Classes</h2>
+                </div>
+                <div class="bd">
+                    <ul>
+                            <li><a href="../classes/Addon.html">Addon</a></li>
+                            <li><a href="../classes/AddonDiscovery.html">AddonDiscovery</a></li>
+                            <li><a href="../classes/AddonsFactory.html">AddonsFactory</a></li>
+                            <li><a href="../classes/AmdTransformAddon.html">AmdTransformAddon</a></li>
+                            <li><a href="../classes/Assembler.html">Assembler</a></li>
+                            <li><a href="../classes/Blueprint.html">Blueprint</a></li>
+                            <li><a href="../classes/Builder.html">Builder</a></li>
+                            <li><a href="../classes/CLI.html">CLI</a></li>
+                            <li><a href="../classes/Command.html">Command</a></li>
+                            <li><a href="../classes/ConcatenationStrategy.html">ConcatenationStrategy</a></li>
+                            <li><a href="../classes/EmberAddon.html">EmberAddon</a></li>
+                            <li><a href="../classes/EmberApp.html">EmberApp</a></li>
+                            <li><a href="../classes/HistorySupportAddon.html">HistorySupportAddon</a></li>
+                            <li><a href="../classes/Instrumentation.html">Instrumentation</a></li>
+                            <li><a href="../classes/NpmTask.html">NpmTask</a></li>
+                            <li><a href="../classes/Project.html">Project</a></li>
+                            <li><a href="../classes/ServeFilesAddon.html">ServeFilesAddon</a></li>
+                            <li><a href="../classes/TestsServerAddon.html">TestsServerAddon</a></li>
+                            <li><a href="../classes/WatcherAddon.html">WatcherAddon</a></li>
+                            <li><a href="../classes/WindowsSymlinkChecker.html">WindowsSymlinkChecker</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+            <div id="sections" class="sidebox">
+              <div class="hd">
+                <h2 class="no-toc">AddonDiscovery</h2>
+              </div>
+              <div class="bd">
+            
+            
+                  <div><a href="#constructor-summary">Constructor Summary</a></div>
+            
+            
+                  <div><a href="#method-summary">Method Summary</a></div>
+            
+            
+            
+            
+            
+            
+            
+                  <div><a href="#public-constructors">Public Constructors</a></div>
+                  <ul>
+                      <li><a href="#method_AddonDiscovery">AddonDiscovery</a></li>
+                  </ul>
+            
+            
+            
+            
+            
+            
+            
+            
+                  <div><a href="#private-methods">Private Methods</a></div>
+                  <ul>
+                      <li><a href="#method_dependencies">dependencies</a></li>
+                      <li><a href="#method_discoverAtPath">discoverAtPath</a></li>
+                      <li><a href="#method_discoverFromDependencies">discoverFromDependencies</a></li>
+                      <li><a href="#method_discoverFromInternalProjectAddons">discoverFromInternalProjectAddons</a></li>
+                      <li><a href="#method_discoverFromProjectItself">discoverFromProjectItself</a></li>
+                      <li><a href="#method_discoverInRepoAddons">discoverInRepoAddons</a></li>
+                      <li><a href="#method_discoverProjectAddons">discoverProjectAddons</a></li>
+                      <li><a href="#method_discoverProjectAddons">discoverProjectAddons</a></li>
+                  </ul>
+              </div>
+            </div>
+            
+            
+            
+            <div class="version-info">
+              Version: 3.0.0--848ef37ffc
+            </div>
+            
+        </div>
+
+        <div id="main" class="yui3-u">
+            <div class="content"><div class="title">
+    <span class="source-link"><a href="../files/lib_models_addon-discovery.js.html#l14"><code>lib&#x2F;models&#x2F;addon-discovery.js:14</code></a></span>
+    <h1 class="class-name">AddonDiscovery</h1>
+</div>
+
+
+
+    <div class="class-extends">
+        <h4>Extends:</h4>
+        <div>CoreObject → AddonDiscovery</div>
+    </div>
+
+<div class="class-description"><p>AddonDiscovery is responsible for collecting information about all of the
+addons that will be used with a project.</p>
+</div>
+
+
+
+
+  <h2 id="constructor-summary">Constructor Summary</h2>
+
+    <table class="summary">
+      <thead>
+      <tr>
+        <th colspan="2">Public Constructors</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            public
+            
+            
+          </td>
+          <td>
+            <div class="method-name ">
+              <a href="#method_AddonDiscovery">AddonDiscovery</a>( )
+            </div>
+            <div class="short-description">
+              <p>AddonDiscovery is responsible for collecting information about all of the addons that will be used with a project.</p>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+  <h2 id="method-summary">Method Summary</h2>
+
+
+
+    <table class="summary">
+      <thead>
+      <tr>
+        <th colspan="2">Private Methods</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            private
+            
+            
+          </td>
+          <td>
+            <div class="method-name ">
+              <a href="#method_dependencies">dependencies</a>(pkg, excludeDevDeps): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a>
+            </div>
+            <div class="short-description">
+              <p>Returns the dependencies from a package.json</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            private
+            
+            
+          </td>
+          <td>
+            <div class="method-name ">
+              <a href="#method_discoverAtPath">discoverAtPath</a>( )
+            </div>
+            <div class="short-description">
+              <p>Given a particular path, return undefined if the path is not an addon, or if it is, a node with the info about the addon.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            private
+            
+            
+          </td>
+          <td>
+            <div class="method-name ">
+              <a href="#method_discoverFromDependencies">discoverFromDependencies</a>( )
+            </div>
+            <div class="short-description">
+              <p>Returns a tree based on the addons referenced in the provided <code>pkg</code> through the package.json <code>dependencies</code> and optionally <code>devDependencies</code> collections, as well as those discovered addons' child addons.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            private
+            
+            
+          </td>
+          <td>
+            <div class="method-name ">
+              <a href="#method_discoverFromInternalProjectAddons">discoverFromInternalProjectAddons</a>( )
+            </div>
+            <div class="short-description">
+              <p>Returns a tree based on the internal addons that may be defined within the project. It does this by consulting the projects <code>supportedInternalAddonPaths()</code> method, which is primarily used for middleware addons.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            private
+            
+            
+          </td>
+          <td>
+            <div class="method-name ">
+              <a href="#method_discoverFromProjectItself">discoverFromProjectItself</a>( )
+            </div>
+            <div class="short-description">
+              <p>Returns an array containing zero or one nodes, depending on whether or not the passed project is an addon.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            private
+            
+            
+          </td>
+          <td>
+            <div class="method-name ">
+              <a href="#method_discoverInRepoAddons">discoverInRepoAddons</a>( )
+            </div>
+            <div class="short-description">
+              <p>Returns a tree based on the in-repo addons referenced in the provided <code>pkg</code> through paths listed in the <code>ember-addon</code> entry, as well as those discovered addons' child addons.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            private
+            
+            
+          </td>
+          <td>
+            <div class="method-name ">
+              <a href="#method_discoverProjectAddons">discoverProjectAddons</a>( )
+            </div>
+            <div class="short-description">
+              <p>This is one of the primary APIs for this class and is called by the project. It returns a tree of plain objects that each contain information about a discovered addon. Each node has <code>name</code>, <code>path</code>, <code>pkg</code> and <code>childAddons</code> properties. The latter is an array containing any addons discovered from applying the discovery process to that addon.</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            private
+            
+            
+          </td>
+          <td>
+            <div class="method-name ">
+              <a href="#method_discoverProjectAddons">discoverProjectAddons</a>( )
+            </div>
+            <div class="short-description">
+              <p>This is one of the primary APIs for this class and is called by addons. It returns a tree of plain objects that each contain information about a discovered addon. Each node has <code>name</code>, <code>path</code>, <code>pkg</code> and <code>childAddons</code> properties. The latter is an array containing any addons discovered from applying the discovery process to that addon.</p>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+
+
+  <div id="methods public">
+    <h2 id="public-constructors">Public Constructors</h2>
+<div class="method item">
+    <div id="method_AddonDiscovery" class="title">
+        <span class="source-link"><a href="../files/lib_models_addon-discovery.js.html#l14"><code>lib&#x2F;models&#x2F;addon-discovery.js:14</code></a></span>
+        <h3 class="">
+            public
+            
+            
+            AddonDiscovery( )
+        </h3>
+    </div>
+
+
+
+    <div class="method-description"></div>
+
+
+
+
+</div>
+  </div>
+
+
+
+
+
+
+
+
+    <div id="methods private">
+        <h2 id="private-methods">Private Methods</h2>
+<div class="method item private">
+    <div id="method_dependencies" class="title">
+        <span class="source-link"><a href="../files/lib_models_addon-discovery.js.html#l216"><code>lib&#x2F;models&#x2F;addon-discovery.js:216</code></a></span>
+        <h3 class="">
+            private
+            
+            
+            dependencies(pkg, excludeDevDeps): <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a>
+        </h3>
+    </div>
+
+
+
+    <div class="method-description"><p>Returns the dependencies from a package.json</p>
+</div>
+
+      <div class="params">
+        <h4>Parameters:</h4>
+        <table>
+          <thead>
+          <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Attribute</th>
+            <th>Description</th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>pkg</td>
+              <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></td>
+              <td>
+                <ul>
+                  
+                  
+                  
+                </ul>
+              </td>
+              <td><p>Package object. If false, the current package is used.</p>
+</td>
+            </tr>
+
+            <tr>
+              <td>excludeDevDeps</td>
+              <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></td>
+              <td>
+                <ul>
+                  
+                  
+                  
+                </ul>
+              </td>
+              <td><p>Whether or not development dependencies should be excluded, defaults to false.</p>
+</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+      <div class="return">
+        <h4>Return:</h4>
+        <div>
+          <span class="return-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" class="crosslink external" target="_blank">Object</a></span>
+          <span class="return-description"><p>Dependencies</p>
+</span>
+        </div>
+      </div>
+
+
+</div>
+<div class="method item private">
+    <div id="method_discoverAtPath" class="title">
+        <span class="source-link"><a href="../files/lib_models_addon-discovery.js.html#l180"><code>lib&#x2F;models&#x2F;addon-discovery.js:180</code></a></span>
+        <h3 class="">
+            private
+            
+            
+            discoverAtPath( )
+        </h3>
+    </div>
+
+
+
+    <div class="method-description"><p>Given a particular path, return undefined if the path is not an addon, or if it is,
+a node with the info about the addon.</p>
+</div>
+
+
+
+
+</div>
+<div class="method item private">
+    <div id="method_discoverFromDependencies" class="title">
+        <span class="source-link"><a href="../files/lib_models_addon-discovery.js.html#l99"><code>lib&#x2F;models&#x2F;addon-discovery.js:99</code></a></span>
+        <h3 class="">
+            private
+            
+            
+            discoverFromDependencies( )
+        </h3>
+    </div>
+
+
+
+    <div class="method-description"><p>Returns a tree based on the addons referenced in the provided <code>pkg</code> through
+the package.json <code>dependencies</code> and optionally <code>devDependencies</code> collections,
+as well as those discovered addons' child addons.</p>
+</div>
+
+
+
+
+</div>
+<div class="method item private">
+    <div id="method_discoverFromInternalProjectAddons" class="title">
+        <span class="source-link"><a href="../files/lib_models_addon-discovery.js.html#l156"><code>lib&#x2F;models&#x2F;addon-discovery.js:156</code></a></span>
+        <h3 class="">
+            private
+            
+            
+            discoverFromInternalProjectAddons( )
+        </h3>
+    </div>
+
+
+
+    <div class="method-description"><p>Returns a tree based on the internal addons that may be defined within the project.
+It does this by consulting the projects <code>supportedInternalAddonPaths()</code> method, which
+is primarily used for middleware addons.</p>
+</div>
+
+
+
+
+</div>
+<div class="method item private">
+    <div id="method_discoverFromProjectItself" class="title">
+        <span class="source-link"><a href="../files/lib_models_addon-discovery.js.html#l82"><code>lib&#x2F;models&#x2F;addon-discovery.js:82</code></a></span>
+        <h3 class="">
+            private
+            
+            
+            discoverFromProjectItself( )
+        </h3>
+    </div>
+
+
+
+    <div class="method-description"><p>Returns an array containing zero or one nodes, depending on whether or not
+the passed project is an addon.</p>
+</div>
+
+
+
+
+</div>
+<div class="method item private">
+    <div id="method_discoverInRepoAddons" class="title">
+        <span class="source-link"><a href="../files/lib_models_addon-discovery.js.html#l135"><code>lib&#x2F;models&#x2F;addon-discovery.js:135</code></a></span>
+        <h3 class="">
+            private
+            
+            
+            discoverInRepoAddons( )
+        </h3>
+    </div>
+
+
+
+    <div class="method-description"><p>Returns a tree based on the in-repo addons referenced in the provided <code>pkg</code>
+through paths listed in the <code>ember-addon</code> entry, as well as those discovered
+addons' child addons.</p>
+</div>
+
+
+
+
+</div>
+<div class="method item private">
+    <div id="method_discoverProjectAddons" class="title">
+        <span class="source-link"><a href="../files/lib_models_addon-discovery.js.html#l27"><code>lib&#x2F;models&#x2F;addon-discovery.js:27</code></a></span>
+        <h3 class="">
+            private
+            
+            
+            discoverProjectAddons( )
+        </h3>
+    </div>
+
+
+
+    <div class="method-description"><p>This is one of the primary APIs for this class and is called by the project.
+It returns a tree of plain objects that each contain information about a
+discovered addon. Each node has <code>name</code>, <code>path</code>, <code>pkg</code> and
+<code>childAddons</code> properties. The latter is an array containing any addons
+discovered from applying the discovery process to that addon.</p>
+</div>
+
+
+
+
+</div>
+<div class="method item private">
+    <div id="method_discoverProjectAddons" class="title">
+        <span class="source-link"><a href="../files/lib_models_addon-discovery.js.html#l56"><code>lib&#x2F;models&#x2F;addon-discovery.js:56</code></a></span>
+        <h3 class="">
+            private
+            
+            
+            discoverProjectAddons( )
+        </h3>
+    </div>
+
+
+
+    <div class="method-description"><p>This is one of the primary APIs for this class and is called by addons.
+It returns a tree of plain objects that each contain information about a
+discovered addon. Each node has <code>name</code>, <code>path</code>, <code>pkg</code> and
+<code>childAddons</code> properties. The latter is an array containing any addons
+discovered from applying the discovery process to that addon.</p>
+</div>
+
+
+
+
+</div>
+    </div>
+
+
+</div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+</body>
+</html>
